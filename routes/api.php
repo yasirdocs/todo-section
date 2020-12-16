@@ -27,5 +27,5 @@ Route::group([
     });
 });
 
-
 Route::apiResource('section', 'SectionController');
+Route::apiResource('task', 'TaskController');

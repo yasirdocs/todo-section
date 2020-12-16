@@ -12,5 +12,9 @@ class Section extends Model
         'name',
         'description'
     ];
-    //
+    
+    public function tasks()
+    {
+       return $this->hasMany('App\Task');
+    }
 }
