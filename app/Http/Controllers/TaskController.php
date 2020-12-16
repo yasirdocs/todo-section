@@ -18,7 +18,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return TaskResource::collection(TaskModel::paginate(25));
+        return TaskResource::collection(TaskModel::with('sections')->get());
     }
 
     /**

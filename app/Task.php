@@ -15,8 +15,8 @@ class Task extends Model
         'state'
     ];
 
-    public function user()
+    public function sections()
     {
-        $this->belongsTo('App\Section');
+        return $this->belongsTo('App\Section', 'id_section', 'id');
     }
 }
