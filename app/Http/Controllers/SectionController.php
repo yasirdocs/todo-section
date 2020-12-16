@@ -36,7 +36,7 @@ class SectionController extends Controller
 
             return new SectionResource($section);
         } catch(\Exception $exception) {
-            throw new HttpException(400, "Invalid data - {$exception->getMessage}");
+            throw new HttpException(400, "Invalid data - {$exception->getMessage()}");
         }
 
     }
@@ -72,7 +72,7 @@ class SectionController extends Controller
 
            return new SectionResource($section);
         } catch(\Exception $exception) {
-           throw new HttpException(400, "Invalid data - {$exception->getMessage}");
+           throw new HttpException(400, "Invalid data - {$exception->getMessage()}");
         }
     }
 
