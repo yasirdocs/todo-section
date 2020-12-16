@@ -19,4 +19,11 @@ class Task extends Model
     {
         return $this->belongsTo('App\Section', 'id_section', 'id');
     }
+
+    public function scopeFilter($query, $filters)
+    {
+        if( isset($filters['state']) ){
+          $query->where('state', '=', $filters['state']);
+        }
+    }    
 }

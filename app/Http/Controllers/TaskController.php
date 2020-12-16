@@ -18,7 +18,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return TaskResource::collection(TaskModel::with('sections')->get());
+        return TaskResource::collection(TaskModel::with('sections')->filter(['state'])->get());
+
     }
 
     /**
